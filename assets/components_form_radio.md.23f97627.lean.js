@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as l}from"./app.91c50ef4.js";const u=JSON.parse('{"title":"BaseRadioGroup - \u5355\u9009","description":"","frontmatter":{},"headers":[],"relativePath":"components/form/radio.md"}'),p={name:"components/form/radio.md"},o=l("",3),e=[o];function r(c,t,F,y,D,i){return n(),a("div",null,e)}const d=s(p,[["render",r]]);export{u as __pageData,d as default};
