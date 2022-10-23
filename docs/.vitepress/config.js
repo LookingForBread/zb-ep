@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/doc/ep/',
+    base: '/zb-ep/',
     title: 'zb-ep文档',
     description: '基于Vue3+Element-plus封装',
     markdown: {
