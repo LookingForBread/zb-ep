@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,a as l}from"./app.fbcabfcc.js";const i=JSON.parse('{"title":"\u52A8\u6001Form","description":"","frontmatter":{},"headers":[],"relativePath":"components/form/introduce.md"}'),p={name:"components/form/introduce.md"},o=l("",3),e=[o];function r(c,D,t,F,y,C){return a(),n("div",null,e)}const b=s(p,[["render",r]]);export{i as __pageData,b as default};
