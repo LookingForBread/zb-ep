@@ -1,5 +1,6 @@
 <script setup>
 import { reactive } from 'vue'
+  const emit =  defineEmits(['doFilter'])
   const props = defineProps({
     filterOptions: Array,
     showRest: {
@@ -12,7 +13,7 @@ import { reactive } from 'vue'
       props.filterOptions.map(item=>{
         filterRes[item.key] = item.customFormatter?item.customFormatter(item.value):item.value
       })
-      context.emit('doFilter',filterRes)
+      emit('doFilter',filterRes)
     }
     const clearFilter = ()=>{
       props.filterOptions.map(item=>{
