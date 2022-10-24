@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!-- <BaseModel ref="bm" :title="'查看资料'" :modelType="'edit'" :showModel="state.showModel" :width="'35%'"
+    <BaseModel ref="bm" :title="'查看资料'" :modelType="'edit'" :showModel="state.showModel" :width="'35%'"
       :modelOptions="state.baseModelOptions" @dialogClose="state.showModel=false" @dialogSubmit="editFile">
     </BaseModel>
-    <el-button @click="showModel">xianshi</el-button> -->
+    <el-button @click="state.showModel=true">xianshi</el-button>
     <!-- <BaseTablePage 
       :tableOptions="state" 
     >
@@ -43,11 +43,11 @@
       }" 
     >
     </BaseUpload> -->
-    <BaseFilter
+    <!-- <BaseFilter
       ref="filter"
       :filterOptions="state.baseFilterOptions"
       :showRest="false"
-      ></BaseFilter>
+      ></BaseFilter> -->
   </div>
 </template>
 
@@ -55,10 +55,12 @@
 import {reactive,ref,onMounted} from 'vue'
 import {baseModelOptions,baseFilterOptions} from './options'
 
-import BaseFilter from '@/components/BaseFilter'
+import BaseModel from '@/components/BaseModel'
+// import BaseFilter from '@/components/BaseFilter'
 const state = reactive({
   showModel: false,
-  baseFilterOptions
+  baseFilterOptions,
+  baseModelOptions
 })
 const filter = ref()
 onMounted(()=>{

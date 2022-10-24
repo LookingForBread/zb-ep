@@ -1,5 +1,4 @@
 <script>
-  import { reactive,ref ,onMounted,watch} from 'vue'
   export default{
     props: {
       showModel: {
@@ -81,6 +80,7 @@
     },
     methods: {
       close(){
+        this.clearForm();
         this.$emit('dialogClose')
       },
       setValueByKey(key,value){
@@ -129,7 +129,7 @@
   
   <template>
     <div>
-      <el-dialog :close-on-click-modal="false" :width="width" @close="close" v-if="showModel" v-model="showModel" :title="title">
+      <el-dialog :close-on-click-modal="false" :width="width" @close="close" v-model="showModel" :title="title">
       <el-form ref="form" :label-width="labelWidth || '30%'" :model="formData" :rules="rules">
         <el-form-item v-show="!item.hide && !(modelType=='edit'&& item.disEdit) " :key="item.key" v-for="item in modelOptions" :prop="`${item.key}`" :label="item.label">
           <component @doLoading="doLoading" :disabled="item.disabled || modelType == 'view'" :style="{width: item.width || '70%'}" :is="item.tag" v-model="formData[item.key]" v-bind="item.attribute" v-on="item.event||{}" ></component>
