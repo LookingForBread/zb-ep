@@ -128,7 +128,7 @@
   </script>
   
   <template>
-    <div>
+    <div v-if="showModel">
       <el-dialog :close-on-click-modal="false" :width="width" @close="close" v-model="showModel" :title="title">
       <el-form ref="form" :label-width="labelWidth || '30%'" :model="formData" :rules="rules">
         <el-form-item v-show="!item.hide && !(modelType=='edit'&& item.disEdit) " :key="item.key" v-for="item in modelOptions" :prop="`${item.key}`" :label="item.label">
